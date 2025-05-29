@@ -4,13 +4,15 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString
-public class MyBean033 {
-    private String nickName;
+public class MyBean0310 {
+    private String name;
     private Integer age;
-    private String address;
-    private Double score;
+    private List<String> skill;
+
 
 }
