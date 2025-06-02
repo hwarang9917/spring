@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3> /main9/sub4 </h3>
+<form action="">
+<!-- 연습 : 여러 취미를 중복해서 선택 가능한 select 요소를 작성-->
+    <select name="hobby" id="" multiple>
+        <option value="football" selected>축구</option>
+        <option value="basketball">농구</option>
+        <option value="game">게임</option>
+    </select>
+    <div>
+        <input type="submit" value="전송">
+    </div>
+    <br>
+
+    <select name="country" id="" multiple required>
+        <option value="korea" selected>한국</option>
+        <option value="us">미국</option>
+        <option value="uk">영국</option>
+        <option value="france">프랑스</option>
+        <option value="japan">일본</option>
+    </select>
+    <br>
+<!-- select : 여러 값 중에 선택 가능한 요소-->
+    <select name="friut" id="">
+        <option value="apple">사과</option>
+        <option value="melon">멜론</option>
+        <option value="mango">망고</option>
+        <option value="lemon">레몬</option>
+        <option value="banana">바나나</option>
+    </select>
+    <div>
+        <input type="submit" value="전송">
+    </div>
+</form>
+
+<form action="">
+    <div>
+        <!-- textarea : 긴 텍스트 작성용-->
+        <textarea name="info3" id="" cols="30" rows="10" placeholder="정보를 입력하세요."
+                  required="required"
+                  readonly
+        ></textarea>
+    </div>
+    <div>
+        <!-- textarea : 긴 텍스트 작성용-->
+        <textarea name="info2" id="" cols="30" rows="10">기본 텍스트 입력</textarea>
+    </div>
+    <div>
+        <!-- textarea : 긴 텍스트 작성용-->
+        <textarea name="info" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="전송">
+    </div>
+</form>
+
+<form action="@{/main9/sub13">
+    <!-- request handler method를 보고 아래 input 요소들 만들기-->
+    <div>
+        <label for="input1">도시</label>
+        <input type="text" id="input1" name="city">
+    </div>
+
+    <div>
+        <label for="input2">나이</label>
+        <input type="number" id="input2" name="age">
+    </div>
+
+    <div>
+        <label for="input3">점수</label>
+        <input type="number" step="0.01" id="input3" name="score">
+    </div>
+
+    <div>
+        <label for="check1">사과</label>
+        <input type="checkbox" name="fruits" id="check1">
+        <label for="check2">망고</label>
+        <input type="checkbox" name="fruits" id="check2">
+        <label for="check3">바나나</label>
+        <input type="checkbox" name="fruits" id="check3">
+    </div>
+
+    <div>
+        <label for="radio1">동의</label>
+        <input type="radio" name="accepted" id="radio1" value="true">
+        <label for="radio2">동의안함</label>
+        <input type="radio" name="accepted" id="radio2" value="false">
+    </div>
+
+    <input type="submit" value="입력">
+</form>
+<hr>
+
+<form action="">
+    <!-- required : 필수 입력-->
+    <input type="text" name="city" required>
+    <!-- multiple : 여러 개 선택 가능-->
+    <input type="file" name="f" id="" multiple>
+    <!-- placeholder : 입력할 값의 hint-->
+    <input type="text" name="address" placeholder="주소를 입력하세요.">
+    <!-- readonly : 변경 불가-->
+    <input type="text" name="name" value="홍길동" readonly>
+</form>
+
+<hr>
+
+<form action="@{/main9/sub12}">
+    <!-- 연습 : 3개의 country 중에 하나만 선택할 수 있는 radio 버튼 만들기 -->
+    <div>
+        <label for="radio-korea">한국</label>
+        <input type="radio" name="country" id="radio-korea" value="korea">
+
+        <label for="radio-usa">미국</label>
+        <input type="radio" name="country" id="radio-usa" value="usa" checked>
+
+        <label for="radio-france">프랑스</label>
+        <input type="radio" name="country" id="radio-france" value="france">
+    </div>
+
+    <div>
+        <!-- radio button : 같은 name 중에 하나의 값만 선택 가능 -->
+        <label for="radio-mango">망고</label>
+        <input type="radio" name="fruit" id="radio-mango" value="mango" checked>
+
+        <label for="radio-melon">멜론</label>
+        <input type="radio" name="fruit" id="radio-melon" value="melon">
+
+        <label for="radio-apple">사과</label>
+        <input type="radio" name="fruit" id="radio-apple" value="apple">
+    </div>
+
+    <input type="submit" value="전송">
+</form>
+
+<hr>
+<form th:action="@{/main9/sub11}">
+    <!-- label : 특정 input에 붙인 텍스트 -->
+    <label for="input-mango">
+        망고
+    </label>
+    <label for="input-melon">
+        멜론
+    </label>
+    <label for="input-apple">
+        사과
+    </label>
+    <div>
+        <input type="checkbox" name="fruit" id="input-mango" value="mango">
+        <!-- 연습 : 멜론, 사과도 label로 만들기-->
+        <input type="checkbox" name="fruit" id="input-melon" value="melon">
+        <input type="checkbox" name="fruit" id="input-apple" value="apple">
+    </div>
+
+    <div>
+        <label for="input-text">
+            이름
+        </label>
+        <input type="text" name="name" id="input-text" value="머스크">
+
+    </div>
+</form>
+<hr>
+<form th:action="@{/main9/sub10}">
+    <div>
+        <input type="checkbox" name="hobby" id="football">
+        축구
+        <input type="checkbox" name="hobby" id="baseball">
+        야구
+        <input type="checkbox" name="hobby" id="basketball">
+        농구
+        <input type="checkbox" name="hobby" id="rugby">
+        럭비
+        <input type="checkbox" name="hobby" id="cook">
+        요리
+    </div>
+
+    <div>
+        <!-- 연습 : 체크하면 hello라는 값이 넘어갈 수 있는 checkbox 만들기 -->
+        <input type="checkbox" name="greeting" value="hello" checked>
+        <!-- checkbox -->
+        <input type="checkbox" name="accept" value="true">
+    </div>
+
+    <div>
+        <input type="submit" value="저장">
+    </div>
+</form>
+<hr>
+<form th:action="@{/main9/sub9}">
+    <div>
+        <!-- 숨겨진 input 요소 -->
+        <input type="hidden" name="hidden" value="숨겨진값">
+    </div>
+    <div>
+        <!-- file -->
+        <input type="file" name="file">
+    </div>
+    <div>
+        <!-- email -->
+        <input type="email" name="mail">
+    </div>
+    <div>
+        <!-- 날짜 시간 -->
+        <input type="datetime-local" name="start">
+    </div>
+    <div>
+        <!-- 날짜-->
+        <input type="date" name="birth">
+    </div>
+    <div>
+        <!-- password field-->
+        <input type="password" name="name">
+    </div>
+    <div>
+        <!-- text field-->
+        <input type="text" name="name">
+    </div>
+    <div>
+        <!-- number field-->
+        <input type="number" min="0" max="100" step="0.1" name="score">
+    </div>
+    <!-- submut 버튼-->
+    <div>
+        <input type="submit">
+    </div>
+
+</form>
+
+<form th:action="@{/main9/sub8}">
+    <!-- 연습 :
+    name, age 요청 파라미터를 작성할 수 있는
+    input 요소 만들기
+    name의 기본값은 홍길동
+    age의 기본값은 1로 적용-->
+    <input type="text" name="name" value="홍길동">
+    <input type="text" name="age" value="1">
+    <button>저장</button>
+
+    <hr>
+    <input type="text" name="address" value="seoul">
+    <button>저장</button>
+</form>
+
+<hr>
+
+<form th:action="@{/main9/sub7}">
+
+    <!-- input으로 만든 submit 버튼 -->
+    <div>
+        <input type="submit" value="저장">
+    </div>
+    <!-- button으로 만든 submit 버튼 -->
+    <div>
+        <button>저장</button>
+    </div>
+    <!-- 그냥 버튼-->
+    <div>
+        <input type="button" value="그냥1">
+        <button type="button">그냥2</button>
+    </div>
+
+    <hr>
+    <div>
+        <input type="text" name="address">
+    </div>
+    <div>
+        <input type="text" name="age">
+    </div>
+    <div>
+        <input type="text" name="city">
+    </div>
+
+</form>
+<!-- 연습-->
+<!--form 요소 만들어보기-->
+<!--submit 버튼을 클릭하면 /main9/sub5에-->
+<!--address, age, city 요청 parameter가 전송될 수 있게-->
+<form th:action="@{/main9/sub6}">
+    <div>
+        <input type="text" name="address">
+    </div>
+    <div>
+        <input type="text" name="age">
+    </div>
+    <div>
+        <input type="text" name="city">
+    </div>
+
+    <div>
+        <input type="submit" value="저장">
+    </div>
+</form>
+<hr>
+<!--form 요소를 만들어보기-->
+<!--/main9/sub5의 요청경로에서 일하는 request handler method 만들기-->
+
+
+<form action="">
+
+</form>
+<hr>
+
+<!-- form : 사용자가 입력한 내용을 쿼리스트링에 붙여서 요청을 보냄-->
+<!-- action 속성 : 쿼리스트링(request parameters)를 어디로 보낼지 결정-->
+<form th:action="@{/main9/sub5}">
+    <!-- form 요소들(input, textarea, select) : request parameter를 완성하는 요소-->
+    <!-- input, type=text -->
+    <!-- name 속성 : request parameter의 이름-->
+    <div>
+        <input type="text" name="keyword">
+    </div>
+    <div>
+        <input type="text" name="email">
+    </div>
+
+    <div>
+        <!-- submit button : 클릭하면 form내 요소들로 쿼리스트링을 만들어서 action 으로 요청보냄-->
+        <input type="submit" value="저장">
+    </div>
+</form>
+
+</body>
+</html>
