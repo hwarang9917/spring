@@ -184,6 +184,5 @@ public class Controller12 {
         rttr.addFlashAttribute("message", "로그아웃 되었습니다.");
 
         return "redirect:/main12/sub12";
-
     }
 }

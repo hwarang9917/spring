@@ -41,5 +41,4 @@ public class Controller01 {
 
         System.out.println("Controller01.method6");
     }
-
 }
