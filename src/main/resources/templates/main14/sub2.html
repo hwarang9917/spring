@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, tr, th, td {
+            border-collapse: collapse;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+<h3>고객명 조회</h3>
+
+<hr>
+<form th:action="@{/main14/sub2}">
+    <label>
+        이름
+        <input type="text" name="keyword" th:value="${param.keyword ?: ''}">
+    </label>
+    <button>조회</button>
+</form>
+<hr>
+
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>contact</th>
+        <th>address</th>
+        <th>city</th>
+        <th>post</th>
+        <th>country</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer : ${customerList}">
+        <td th:text="${customer.id}"></td>
+        <td th:text="${customer.name}"></td>
+        <td th:text="${customer.contactName}"></td>
+        <td th:text="${customer.address}"></td>
+        <td th:text="${customer.city}"></td>
+        <td th:text="${customer.postalCode}"></td>
+        <td th:text="${customer.country}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
