@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        table, td, th, tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<h3>새 공급자 등록</h3>
+<hr>
+<form th:action="@{/main16/sub2}" method="post">
+    <div>
+        <label>
+            공급자명
+            <input type="text" name="name">
+        </label>
+    </div>
+    <div>
+        <label>
+            계약명
+            <input type="text" name="contact">
+        </label>
+    </div>
+    <div>
+        <label>
+            주소
+            <input type="text" name="address">
+        </label>
+    </div>
+    <div>
+        <label>
+            도시
+            <input type="text" name="city">
+        </label>
+    </div>
+    <div>
+        <label>
+            우편번호
+            <input type="text" name="postalCode">
+        </label>
+    </div>
+    <div>
+        <label>
+            국가
+            <input type="text" name="country">
+        </label>
+    </div>
+    <div>
+        <label>
+            휴대폰번호
+            <input type="text" name="phone">
+        </label>
+    </div>
+
+    <div>
+        <button>등록</button>
+    </div>
+
+</form>
+<hr>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>contact</th>
+        <th>address</th>
+        <th>city</th>
+        <th>post</th>
+        <th>country</th>
+        <th>phone</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="supplier : ${supplierList}">
+        <td th:text="${supplier.id}"></td>
+        <td th:text="${supplier.name}"></td>
+        <td th:text="${supplier.contact}"></td>
+        <td th:text="${supplier.address}"></td>
+        <td th:text="${supplier.city}"></td>
+        <td th:text="${supplier.postalCode}"></td>
+        <td th:text="${supplier.country}"></td>
+        <td th:text="${supplier.phone}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

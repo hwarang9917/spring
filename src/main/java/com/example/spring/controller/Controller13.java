@@ -465,8 +465,8 @@ public class Controller13 {
             ProductDto dto = new ProductDto();
             dto.setId(resultSet.getInt("ProductId"));
             dto.setName(resultSet.getString("ProductName"));
-            dto.setSupplierId(resultSet.getInt("SupplierID"));
-            dto.setCategoryId(resultSet.getInt("CategoryID"));
+            dto.setSupplier(resultSet.getInt("SupplierID"));
+            dto.setCategory(resultSet.getInt("CategoryID"));
             dto.setUnit(resultSet.getString("Unit"));
             dto.setPrice(resultSet.getDouble("Price"));
             list.add(dto);
@@ -506,8 +506,8 @@ public class Controller13 {
             ProductDto dto = new ProductDto();
             dto.setId(resultSet.getInt("ProductId"));
             dto.setName(resultSet.getString("ProductName"));
-            dto.setSupplierId(resultSet.getInt("SupplierID"));
-            dto.setCategoryId(resultSet.getInt("CategoryID"));
+            dto.setSupplier(resultSet.getInt("SupplierID"));
+            dto.setCategory(resultSet.getInt("CategoryID"));
             dto.setUnit(resultSet.getString("Unit"));
             dto.setPrice(resultSet.getDouble("Price"));
             list.add(dto);
@@ -550,8 +550,8 @@ public class Controller13 {
             ProductDto dto = new ProductDto();
             dto.setId(resultSet.getInt("ProductId"));
             dto.setName(resultSet.getString("ProductName"));
-            dto.setSupplierId(resultSet.getInt("SupplierID"));
-            dto.setCategoryId(resultSet.getInt("CategoryID"));
+            dto.setSupplier(resultSet.getInt("SupplierID"));
+            dto.setCategory(resultSet.getInt("CategoryID"));
             dto.setUnit(resultSet.getString("Unit"));
             dto.setPrice(resultSet.getDouble("Price"));
             list.add(dto);
@@ -588,8 +588,8 @@ public class Controller13 {
             ProductDto dto = new ProductDto();
             dto.setId(resultSet.getInt("ProductId"));
             dto.setName(resultSet.getString("ProductName"));
-            dto.setSupplierId(resultSet.getInt("SupplierID"));
-            dto.setCategoryId(resultSet.getInt("CategoryID"));
+            dto.setSupplier(resultSet.getInt("SupplierID"));
+            dto.setCategory(resultSet.getInt("CategoryID"));
             dto.setUnit(resultSet.getString("Unit"));
             dto.setPrice(resultSet.getDouble("Price"));
             list.add(dto);
@@ -627,8 +627,8 @@ public class Controller13 {
             ProductDto dto = new ProductDto();
             dto.setId(resultSet.getInt("ProductId"));
             dto.setName(resultSet.getString("ProductName"));
-            dto.setSupplierId(resultSet.getInt("SupplierID"));
-            dto.setCategoryId(resultSet.getInt("CategoryID"));
+            dto.setSupplier(resultSet.getInt("SupplierID"));
+            dto.setCategory(resultSet.getInt("CategoryID"));
             dto.setUnit(resultSet.getString("Unit"));
             dto.setPrice(resultSet.getDouble("Price"));
             list.add(dto);
@@ -672,8 +672,8 @@ public class Controller13 {
             ProductDto dto = new ProductDto();
             dto.setId(resultSet.getInt("ProductId"));
             dto.setName(resultSet.getString("ProductName"));
-            dto.setSupplierId(resultSet.getInt("SupplierID"));
-            dto.setCategoryId(resultSet.getInt("CategoryID"));
+            dto.setSupplier(resultSet.getInt("SupplierID"));
+            dto.setCategory(resultSet.getInt("CategoryID"));
             dto.setUnit(resultSet.getString("Unit"));
             dto.setPrice(resultSet.getDouble("Price"));
             list.add(dto);
