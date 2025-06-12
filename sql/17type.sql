@@ -161,6 +161,11 @@ CREATE TABLE table12
     col6 TIME,
     col7 DATETIME
 );
+INSERT INTO table12
+(col1, col2, col3, col4, col5, col6, col7)
+VALUES ();
+SELECT *
+FROM table12;
 
 CREATE TABLE table13
 (
@@ -169,7 +174,6 @@ CREATE TABLE table13
     score      DECIMAL(10, 2),
     born_at    DATETIME
 );
-
 INSERT INTO table13
     (name, birth_date, score, born_at)
     VALUE ();
